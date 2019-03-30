@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<div class='form-container'>
+    <div class='form-header'>
+        <h3>Login</h3>
+    </div>
+    <form action='/login' method='POST' id='user-form'>
+        <input placeholder='Email' type='email' name='username'>
+        <input placeholder='Password' type='password' name='password'>
+        <input type='submit' value='Login'>
+    </form>
+</div>
+
+<% include partials/footer %>

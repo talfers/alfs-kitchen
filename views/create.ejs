@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+
+    <div class='form-container'>
+            <div class='form-header'>
+                <h3>Create Recipe</h3>
+            </div>
+            <form action='/recipes' method='POST' id='recipe-form'>
+                <button class='form-action' type='submit'>Create Recipe</button>
+                <label for="title">Title</label>
+                <input name='title' id='title' type="text">
+                <label for="image">Image</label>
+                <input name='image' id='image' type="text">
+                <label for="serves">Serves</label>
+                <label for="desc">Description</label>
+                <textarea name='desc' id='desc'></textarea>
+                <label for="author">Author</label>
+                <input name='author' id='author' type="text">
+                <label for="tags">Tags</label>
+                <input name='tags' id='tags' type="text">
+                <h4 id='recipe-header'>Recipe Parts</h4>
+                <div id='parts-container'>
+                    <div class='part-div'>
+                        <label for="part">Part</label>
+                        <input name='parts' class='part' type="text">
+                    </div>
+                </div>
+                <button type='button' id='add-part'><i class="fas fa-plus"></i></button>
+            </form>
+    </div>
+
+<% include partials/footer %>
+<script src='/lib/form.js'></script>

@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<content>
+  <div id='centerfold' class="banner">
+    <h1>Recipes</h1>
+    <i class="arrow down"></i>
+  </div>
+  <div id='recipes'>
+    <% let slide = 'fade-left' %>
+    <% recipes.forEach(function(recipe){ %>
+  <section>
+    <article data-aos="<%= slide %>" data-aos-duration="2000" class='recipe'>
+      <div class='port-img'>
+        <img src='<%= recipe.image %>'>
+      </div>
+      <div class='port-txt'>
+        <h2> <%= recipe.title %> </h2>
+        <p><%= recipe.desc %></p>
+        <a class='button' href='/recipes/<%= recipe._id %>'>See Recipe</a>
+      </div>
+    </article>
+  </section>
+  <% if(slide == 'fade-left'){ %>
+    <% slide = 'fade-right' %>
+  <% } else { %>
+    <% slide = 'fade-left' %>
+    <% } %>
+  <% }); %>
+  </div>
+</content>
+
+
+<% include partials/footer %>

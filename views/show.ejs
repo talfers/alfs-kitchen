@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+<div id='centerfold' class='show'>
+  <div class='show-title'>
+    <div class='title'>
+      <h1><%= recipe.title %></h1>
+    </div>
+  </div>
+  <div class='show-image'>
+    <img src="<%= recipe.image %>">
+  </div>
+  <div class='show-desc'>
+      <p class='serve'><%= recipe.serves %> Servings</p>
+      <p class='desc'><%= recipe.desc %></p>
+  </div>
+  <div class='show-content'>
+    <div class='show-recipe'>
+      <div class='ingredients'>
+        <div class='list'>
+          <p class='recipe-header'>INGREDIENTS:</p>
+          <% for(let i=0; i<recipe.recipe.parts.length; i++) { %>
+            <p class='sub-cat'> <%= recipe.recipe.parts[i].name %> </p>
+             <% recipe.recipe.parts[i].ingredients.forEach(function(item){ %>
+                <p class='list-item'> <%= item %> </p>
+              <% }); %>
+          <% }; %>
+            
+        </div>
+      </div>
+    </div>
+    <div class='show-directions'>
+      <div class='directions list'>
+        <p class='recipe-header'>RECIPE PREPARATION:</p>
+        <% for(let i=0; i<recipe.recipe.parts.length; i++) { %>
+          <p class='sub-cat'> <%= recipe.recipe.parts[i].name %> </p>
+          <% recipe.recipe.parts[i].directions.forEach(function(item){ %>
+            <p class='list-item'> <%= item %> </p>
+          <% }); %>
+        <% }; %>
+      </div>
+    </div>
+    <div class='show-author'>
+      Recipe by <%= recipe.author %>
+    </div>
+  </div>
+</div>
+
+<% include partials/footer %>
