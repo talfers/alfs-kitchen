@@ -4,7 +4,7 @@
   "description": "delicious, (mostly) modest favorites",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Taylor Alfers",
   "license": "ISC",
