@@ -417,86 +417,59 @@ div.show-content .show-author {
 
 /*FORM STYLES*/
 .form-container {
-  margin-top: 84px;
-  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 1200px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  
-}
-
-form {
-  background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  padding: 24px 36px;
-}
-
-.list p.list-item {
-  margin: 12px 0;
-}
-
-label {
-  display: block;
-  color: grey;
-}
-
-#recipe-form input, #recipe-form textarea {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
+  margin: 96px auto 0 auto;
+  width: 40%;
 }
 
 .form-header {
-  width: 35%;
-  background-color: #FFA67A;
-  padding: 24px 36px;
+  background: #FFA67A;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 18px;
 }
 
 .form-header h3 {
-  font-weight: bold;
   font-size: 24px;
-  letter-spacing: 2.5px;
 }
 
-.form-action {
-  align-self: flex-end;
-  width: 30%;
+.form-header * {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  align-items: center;
+}
+
+form input, form textarea {
+  margin: 12px 18px 0px 18px;
+  width: 75%;
+  height: 24px;
+}
+
+form input[type=submit] {
+  margin-bottom: 12px;
   background: #191919;
-  border: none;
   padding: 12px;
-  color: #f5f5f5;
-  cursor: pointer;
-  font-weight: normal;
-  font-size: 16px;
-  
-}
-
-.form-del {
-  margin-left: 4px;
-  color: #B22222;
+  border: none;
+  color: #f0f0f0;
+  width: 30%;
   font-weight: bold;
   cursor: pointer;
+  height: inherit;
 }
 
-.form-del:hover {
+form input[type=submit]:hover {
   transform: scale(1.1);
 }
-
-button i.fa-plus {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-button#add-part {
-  background: none;
-  border: none;
-  width: 60px;
-}
-
 
 /*FOOTER STYLES*/
 footer {

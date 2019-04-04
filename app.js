@@ -100,7 +100,7 @@ app.get('/logout', function(req, res) {
 });
 
 app.get('/create', function(req, res) {
-    res.render('create-meta');
+    res.render('create');
 });
 
 app.post('/recipes', function(req, res) {
