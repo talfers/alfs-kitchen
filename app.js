@@ -9,6 +9,7 @@ const passport = require("passport");
 const path = require("path");
 const LocalStrategy = require("passport-local");
 const nodemailer = require("nodemailer");
+const emailAuth = require('./emailAuth');
 
 //APP CONFIG
 app.set('view engine', 'ejs');
@@ -90,8 +91,8 @@ app.post('/subscribe', function(req, res){
                     port: 587,
                     secure: false, // true for 465, false for other ports
                     auth: {
-                      user: 'a0e4d38ff00bb9f1a0c916773f566895', // generated ethereal user
-                      pass: 'fb9bb29c0a1193340ac8a6a9bc3ac5ad' // generated ethereal password
+                      user: emailAuth.user, // generated ethereal user
+                      pass: emailAuth.pass // generated ethereal password
                     }
                 });
                 
