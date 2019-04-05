@@ -464,6 +464,10 @@ form input[type=submit]:hover {
   transform: scale(1.1);
 }
 
+a#login {
+  color: blue;
+}
+
 /*FOOTER STYLES*/
 footer {
   display: flex;

@@ -81,9 +81,10 @@ app.post('/subscribe', function(req, res){
         } else {
             passport.authenticate('local')(req, res, function(){
                 const output = `
-                <p>Welcome to Alf's Kitchen!</p>
-                <h3>${req.body.username}</h3>
-                <a href='http://www.alfskitchen.com'>Alf's Kitchen</a>
+                <h3>Welcome to Alf's Kitchen, ${req.body.username}!</h3>
+                <p>You can now view our recipes and choose which delicious favorites to send to your email!</p>
+                <p>Just go on over to:</p>
+                <a href='http://www.alfskitchen.com'>AlfsKitchen.com</a>
                 `;
                     // create reusable transporter object using the default SMTP transport
                 let transporter = nodemailer.createTransport({
@@ -100,8 +101,8 @@ app.post('/subscribe', function(req, res){
                 let mailOptions = {
                     from: '"Alfs Kitchen" <admin@alfskitchen.com>', // sender address
                     to: req.body.username, // list of receivers
-                    subject: "Welcome to Alfs Kitchen!", // Subject line
-                    text: "Hello world?", // plain text body
+                    subject: "Welcome to Alf's Kitchen!", // Subject line
+                    text: "Welcome", // plain text body
                     html: output // html body
                 };
                 
