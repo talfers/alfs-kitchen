@@ -350,7 +350,6 @@ div.show-desc .serve {
 .show div.show-content {
   display: flex;
   flex-direction: column;
-  /*background-color: #f0f0f0;*/
   flex: 1 1 auto;
   padding: 0 30%;
 }
@@ -360,7 +359,6 @@ div.show-desc .serve {
   flex-direction: column;
   flex: 1 1 auto;
   margin: 0 0;
-  /*background: #f0f0f0;*/
   border-bottom: solid #191919 6px;
 }
 
@@ -368,7 +366,6 @@ div.show-desc .serve {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  /*background: #f0f0f0;*/
   border-bottom: solid #191919 6px;
 }
 
@@ -377,7 +374,7 @@ div.show-content .show-recipe .ingredients {
   flex-direction: column;
   flex: 1 1 100%;
   background: #CDCDCD;
-  margin: 40px 0;
+  margin: 40px 0px;
   align-items: center;
   height: auto;
   justify-content: space-around;
@@ -469,6 +466,20 @@ form input[type=submit]:hover {
 
 /*FOOTER STYLES*/
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex: 1 1 100px;
   background-color: #191919;
+  color: #f0f0f0;
+  padding: 0px 60px;
+}
+
+footer p {
+  margin: 4px;
+  font-size: 12px;
+}
+
+#credits {
+  font-size: 8px;
 }
