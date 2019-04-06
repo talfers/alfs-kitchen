@@ -6,10 +6,9 @@ const db = require("./models");
 const createRecipes = require("./creator");
 const clearDB = require("./clearDB");
 const passport = require("passport");
-const path = require("path");
 const LocalStrategy = require("passport-local");
 const nodemailer = require("nodemailer");
-const emailAuth = require('./emailAuth');
+const emailAuth = require("./emailAuth");
 
 //APP CONFIG
 app.set('view engine', 'ejs');
@@ -83,8 +82,7 @@ app.post('/subscribe', function(req, res){
                 const output = `
                 <h3>Welcome to Alf's Kitchen, ${req.body.username}!</h3>
                 <p>You can now view our recipes and choose which delicious favorites to send to your email!</p>
-                <p>Just go on over to:</p>
-                <a href='http://www.alfskitchen.com'>AlfsKitchen.com</a>
+                <p>Just go on over to: <a href='http://www.alfskitchen.com'>AlfsKitchen.com</a></p>
                 `;
                     // create reusable transporter object using the default SMTP transport
                 let transporter = nodemailer.createTransport({
@@ -99,10 +97,10 @@ app.post('/subscribe', function(req, res){
                 
                 // setup email data with unicode symbols
                 let mailOptions = {
-                    from: '"Alfs Kitchen" <admin@alfskitchen.com>', // sender address
-                    to: req.body.username, // list of receivers
-                    subject: "Welcome to Alf's Kitchen!", // Subject line
-                    text: "Welcome", // plain text body
+                    from: '"Alfs Kitchen" <no-reply@alfskitchen.com>', // sender address
+                    to: "tayloralfers@gmail.com", // list of receivers
+                    subject: "Welcome to Alfs Kitchen!", // Subject line
+                    text: "Hello world?", // plain text body
                     html: output // html body
                 };
                 

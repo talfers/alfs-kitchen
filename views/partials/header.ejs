@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Muli" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-<link rel="icon" type="image/png" href="/img/favicon.png">
 <script defer src='/lib/lazy.js'></script>
 </head>
 <body>
@@ -22,8 +21,8 @@
             <% } else { %>
             <% var n = currentUser.username.indexOf('@'); %>
             <% var user = currentUser.username.slice(currentUser[0], n); %>
-            <li><a class='user' href=""><%= user %></a><!--<i class="fas fa-sign-out-alt"></i>--></li>
-            <li><a class='user' href="/logout">Logout</a><!--<i class="fas fa-sign-out-alt"></i>--></li>
+            <li><a class='user' href=""><%= user %></a></li>
+            <li><a class='user' href="/logout">Logout</a></li>
             <% }; %>
         </ul>
     </header>
