@@ -467,8 +467,22 @@ form input[type=submit]:hover {
   color: blue;
 }
 
+#credits {
+  font-size: 8px;
+}
+
 /*FOOTER STYLES*/
 footer {
+  display: flex;
+  color: white;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-between;
   flex: 1 1 100px;
   background-color: #191919;
+  padding: 0px 60px;
+}
+
+footer p {
+  margin: 4px;
 }
