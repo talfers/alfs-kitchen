@@ -67,6 +67,26 @@ var seedData = [{
 	},			
 	author: 'Taylor Alfers',			
 	tags: ['Dinner', 'Easy']			
+},
+{				
+	title: "Moisty Meatloaf",			
+	image: 'https://www.cheatsheet.com/wp-content/uploads/2016/01/Homemade-Ground-Beef-Meatloaf.jpg?x28127',			
+	serves: 6,			
+	desc: 'This meatloaf is so moist it will fall apart in your mouth.',			
+	recipe: {			
+		parts: [{		
+			name: 'Meatloaf',	
+			ingredients: ['1.5 lb Beef', '1 cup Bread Crumbs', '1 medium Onion', '2 cloves', '1/2 cup Milk', '1 Egg (beaten)', '2 Tbs Ketchup', '1 Tbs Worcestershire Sauce', '1-2 tsp Dried Parsley', '1 tsp Salt', '1/4 tsp Black Pepper'],	
+			directions: ['Preheat oven to 360 degrees.', 'Place all ingredient for the meatloaf in a medium bowl, including the wet ingredients. Use your hands to lightly mix and massage the meat and other ingredients together. Next, place the meat mixture in a bread pan and pat the top to make even. Place the bread pan in the preheated oven and let cook for approx 40 minutes.', 'After the initial 40 minutes, take the meatloaf out of the oven and pour sauce over the top. Place the pan back in the oven for approx 15 minutes.', 'Take meatloaf out of oven and let sit for 10 min. Slice and serve.']	
+		},
+		{
+		    name: 'Topping',
+		    ingredients: ['3/4 cup Ketchup', '1-1/2 tsp Vinegar','2-1/2 Tbs Brown Sugar','1 tsp Garlic Powder','1/2 tsp Onion Powder','1/4 tsp Black Pepper', '1/4 tsp Salt'],
+		    directions: ['Place all topping ingredients in a small mixing bowl and use a wisk to mix together. Place aside until meatloaf has been cooked for approx 40 minutes.']
+		}]		
+	},			
+	author: 'Taylor Alfers',			
+	tags: ['Dinner', 'Easy']			
 }];
 
 module.exports = seedData;
