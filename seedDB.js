@@ -87,6 +87,21 @@ var seedData = [{
 	},			
 	author: 'Taylor Alfers',			
 	tags: ['Dinner', 'Easy']			
+},
+{				
+	title: "Amazing Alfajores",			
+	image: 'https://images.unsplash.com/photo-1552552492-9c335658343d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',			
+	serves: 10,			
+	desc: 'This Argentinean classic is the most deliciously moist and crumbly cookie you will ever get your hands on.',			
+	recipe: {			
+		parts: [{		
+			name: 'Cookie',	
+			ingredients: [' 1-1/2 cups All-Purpose Flour', '2-1/8 cups Cornstarch', '2 tsp Baking Powder', '1/2 tsp Baking Soda', ' 1-3/4 sticks Unsalted Butter (room temp)', '3/4 cup Granulated Sugar', '1-2 tsp Lemon Zest (grated)', '3 whole Egg Yolks', '2 tsp Vanilla Extract', '12 oz Dulce de Leche (for filling)', '1/2 cup Unsweetened Shredded Coconut (for rolling)'],	
+			directions: ['In a medium bowl, sift together flour, cornstarch, baking powder, and baking soda. Set aside.', 'In a mixer bowl fitted with the paddle attachment, beat butter, sugar, and lemon zest on medium speed until light and fluffy, about 3 minutes. Beat in egg yolks and vanilla extract just until combined. Reduce speed to low. Add the flour mixture and beat just until combined. Do not overmix or the cookies will turn out tough.', 'Form the dough into a ball, then flatten slightly to form a disc. Wrap with plastic wrap and refrigerate for 1-2 hours, until firm enough to roll.', 'If you don’t want to use the dough right away, you can refrigerate it for up to 3 days or freeze it for up to a month, then thaw it overnight in the fridge.', 'Take the dough out of the fridge and let it sit on the counter for a few minutes to soften slightly for easy rolling. On a lightly floured surface (or between 2 pieces of parchment paper), roll the dough to a 1/8 or 1/4-inch (3-5mm) thickness. Cut out into rounds using a 2-inch (5cm) fluted or round cookie cutter, and place the cookies on baking sheets lined with parchment paper.', 'If at any point the dough becomes too warm, place it back into the fridge for a few minutes. Re-roll the remaining scraps and repeat. Place sheets with cookies in the freezer or fridge for at least 15 minutes, until firm, so that they will be less prone to spreading.', 'Preheat oven to 350F/180C. Bake for 7-10 minutes, or until cookies appear golden brown at the edges. Allow cookies to cool in the pan for 10 minutes, then gently transfer to a wire rack to cool completely.', 'Spread the bottom half of the cookies with dulce de leche (about a teaspoon). Sandwich together with remaining cookies, pressing slightly so that the caramel oozes out the sides. Roll the sides in shredded coconut.', 'Store cookies at room temperature in an airtight container for up to a week or freeze for up to 2 months. To thaw, leave on the counter, still covered, or overnight in the fridge.']	
+		}]		
+	},			
+	author: 'Taylor Alfers',			
+	tags: ['Hard', 'Dessert']			
 }];
 
 module.exports = seedData;
