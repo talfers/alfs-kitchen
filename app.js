@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const db = require("./models");
 const createRecipes = require("./creator");
 const clearDB = require("./clearDB");
@@ -33,10 +33,10 @@ passport.deserializeUser(db.User.deserializeUser());
 
 
 //CREATE ALL ROUTE VAR
-app.use(function(req, res, next){	
+app.use(function(req, res, next){
 	res.locals.currentUser = req.user;
 	next();
-});	
+});
 
 //DB SEEDING
 clearDB;
@@ -68,7 +68,7 @@ app.get('/recipes/:id', function(req, res){
 });
 
 app.get('/subscribe', function(req, res) {
-   res.render('subscribe'); 
+   res.render('subscribe');
 });
 
 app.post('/subscribe', function(req, res){
@@ -94,7 +94,7 @@ app.post('/subscribe', function(req, res){
                       pass: emailAuth.pass // generated ethereal password
                     }
                 });
-                
+
                 // setup email data with unicode symbols
                 let mailOptions = {
                     from: '"Alfs Kitchen" <no-reply@alfskitchen.com>', // sender address
@@ -103,7 +103,7 @@ app.post('/subscribe', function(req, res){
                     text: "Hello world?", // plain text body
                     html: output // html body
                 };
-                
+
                 // send mail with defined transport object
                 transporter.sendMail(mailOptions, function(error, info){
                     if(error) {
@@ -123,7 +123,7 @@ app.post('/subscribe', function(req, res){
 });
 
 app.get('/login', function(req, res) {
-   res.render('login'); 
+   res.render('login');
 });
 
 app.post("/login", passport.authenticate("local", {

@@ -9,6 +9,7 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 a {
@@ -49,10 +50,16 @@ header {
 }
 
 header #brand {
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  font-family: 'Libre Baskerville', serif;
+  height: 100%;
+}
+
+header #brand img {
+  height: 48px;
+  width: auto;
+}
+
+.right {
+  padding-left: 1rem;
 }
 
 .right li {
@@ -72,7 +79,7 @@ content {
 }
 
 section {
-  flex: 1 1 900px;
+  flex: 1 1;
   display: flex;
   flex-direction: column;
 }
@@ -83,7 +90,7 @@ section:nth-child(even) {
 }
 
 section article {
-    flex: 1 1 900px;
+    flex: 1 1 90vh;
     margin: 84px 60px;
     display: flex;
     position: relative;
@@ -485,4 +492,10 @@ footer {
 
 footer p {
   margin: 4px;
+}
+
+@media only screen and (max-width: 1100px) {
+  section article {
+    flex: 1 1 900px;
+    }
 }
